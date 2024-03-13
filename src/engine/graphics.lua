@@ -46,5 +46,5 @@ end
 -- Set color with HSV values
 function love.graphics.setColorHSV(h, s, v, a)
     local r, g, b = std.hsvToRgb(h, s, v)
-    love.graphics.setColor(r, g, b, a or 255)
+    love.graphics.setColor(r / 255, g / 255, b / 255, a and a / 255 or 1)
 end
